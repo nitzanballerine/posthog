@@ -55,5 +55,6 @@ export async function delayUntilEventIngested<T extends any[] | number>(
         }
         await delay(delayMs)
     }
+    console.trace('Ran out of delay time')
     return data
 }

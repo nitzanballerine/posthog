@@ -22,7 +22,7 @@ export async function runAsyncHandlersStep(
 async function processOnEvent(runner: EventPipelineRunner, event: PostIngestionEvent) {
     const processedPluginEvent = convertToProcessedPluginEvent(event)
     const isSnapshot = event.event === '$snapshot'
-    if (isSnapshot) {return}
+    if (isSnapshot) { return }
 
     await runInstrumentedFunction({
         server: runner.hub,
